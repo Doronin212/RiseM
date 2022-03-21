@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>RiseIT</title>
+	<link href="scrip.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	<header>
+		<div id="logo" onclick="slowScroll('#top')">
+			<span>RiseM</span>
+		</div>
+		<div id="about">
+			<ul>
+			<li><a href="#" title="Mult" onclick="slowScroll('#main')">CSS</a></li>
+			<li><a href="#" title="Film" onclick="slowScroll('#main')">HTML</a></li>
+			<li><a href="#" title="Anime" onclick="slowScroll('#main')">C++</a></li>
+			<li><a href="#" title="Rise" onclick="slowScroll('#main')">Java</a></li>
+			<li><a href="#" title="Music" onclick="slowScroll('#main')">Python</a></li>
+			<li><a href="#" title="Rep" onclick="slowScroll('#main')">C+</a></li>
+			</ul>
+		</div>
+	</header>
+	
+	<div id="top">
+	<h1>HTML and CSS</h1>
+	<h3>Start learning now!</h3>
+	</div>
+	
+	<div id="main">
+		<div class="intro">
+			<h2>Мы научим вас разным языкам программирования!</h2>
+			<span>Языки которым мы вас можем научить являются:CSS,Python,C++,html(Подробнее в поддержке)</span>
+		</div>
+		<div class="text">
+			<span>Язык программирования — формальный язык, предназначенный для записи компьютерных программ. Язык программирования определяет набор лексических, синтаксических и семантических правил, определяющих внешний вид программы и действия, которые выполнит исполнитель (обычно — ЭВМ) под её управлением.
+
+Со времени создания первых программируемых машин человечество придумало более восьми тысяч языков программирования (включая эзотерические, визуальные и игрушечные). Каждый год их число увеличивается. Некоторыми языками умеет пользоваться только небольшое число их собственных разработчиков, другие становятся известны миллионам людей. Профессиональные программисты могут владеть несколькими языками программирования.</span>
+		</div>
+	</div>
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+</script>
+</body>
